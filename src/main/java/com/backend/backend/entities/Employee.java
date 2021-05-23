@@ -24,7 +24,7 @@ public class Employee {
     private String job;
     @ManyToOne
     @JoinColumn(name = "MNGID")
-    private Employee employee;
+    private Employee manager;
     @Column(name = "Hiredate")
     private Date hireDate;
     @Column(name = "Salary",precision=7, scale=2)
@@ -43,9 +43,9 @@ public class Employee {
     }
 
 
-    public String getEmployee(){
-        if(employee!=null){
-            return employee.getLastName();
+    public String getManager(){
+        if(manager!=null){
+            return manager.getLastName()+" "+manager.getFirstName();
         }else return "";
 
     }
