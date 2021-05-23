@@ -52,11 +52,15 @@ public class EmployeeController {
     }
     @GetMapping(value = "/search/", produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<?> employeeSearch(@RequestParam(name = "lastName",required = false) String lastName,@RequestParam(name = "firstName",required =false) String firstName) {
-        if(lastName.equals("") && firstName.equals("")){
-            return ResponseEntity.ok(employeeRepo.findAll());
-        }else{
-            return ResponseEntity.ok().body(employeeRepo.findByFirstNameIgnoreCaseOrLastNameIgnoreCase(firstName, lastName));
-        }
+        if(lastName!=null && firstName!=null){
+
+            if(lastName.equals("") && firstName.equals("")){
+                return ResponseEntity.ok(employeeRepo.findAll());
+            }else{
+                return ResponseEntity.ok().body(employeeRepo.findByFirstNameIgnoreCaseOrLastNameIgnoreCase(firstName, lastName));
+            }
+
+        }else return ResponseEntity.ok(employeeRepo.findAll());
 
     }
 
