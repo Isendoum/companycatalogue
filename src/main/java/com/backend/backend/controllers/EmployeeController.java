@@ -60,7 +60,7 @@ public class EmployeeController {
                 return ResponseEntity.ok().body(employeeRepo.findByFirstNameIgnoreCaseOrLastNameIgnoreCase(firstName, lastName));
             }
 
-        }else return ResponseEntity.ok(employeeRepo.findAll());
+        }else return ResponseEntity.ok().body(employeeRepo.findByFirstNameIgnoreCaseOrLastNameIgnoreCase(firstName, lastName));
 
     }
 
