@@ -26,9 +26,9 @@ public class JPAConfig {
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUsername("uyu0m8ckqzgaumvl");
-        dataSource.setPassword("PA7LSS9hfp2JFXzJOS7Z");
-        dataSource.setUrl("jdbc:mysql://uyu0m8ckqzgaumvl:PA7LSS9hfp2JFXzJOS7Z@b7zbas9ctlowoqil6c8a-mysql.services.clever-cloud.com:3306/b7zbas9ctlowoqil6c8a");
+        dataSource.setUsername("yourUsername");
+        dataSource.setPassword("yourPassword");
+        dataSource.setUrl("yourDatabaseLink?createDatabaseIfNotExist=true")
         return dataSource;
     }
 

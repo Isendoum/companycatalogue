@@ -45,4 +45,4 @@
       returns xml of employee with empId
  #####get "/search/" request params (firstName,lastName)
       returns xml list of employees with match firstName and lastName or any of them if one is empty
-      returns all employees if both params are empty
+      returns all employees if both params are empty strings
