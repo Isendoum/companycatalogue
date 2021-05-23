@@ -38,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -92,6 +93,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="717" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.16.1680.1010@0.0.1920.1040" timestamp="1621447918293" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621811021170">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.16.1680.1010@0.0.1920.1040" timestamp="1621811021170" />
     <state x="614" y="115" key="CommitChangelistDialog2" timestamp="1621777266380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
