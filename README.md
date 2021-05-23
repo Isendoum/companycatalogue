@@ -8,9 +8,10 @@ git clone https://github.com/Isendoum/companycatalogue.git
 #### Step 2: Install dependencies and build artifacts
 #### Step 3: In project structure src/main/resources create application.properties file with your database link and credentials(don't forget this step otherwise it is going to throw an error on build) example:
   ```java
-  dataSource.setUsername("yourUsername");
-  dataSource.setPassword("yourPassword");
-  dataSource.setUrl("yourDatabaseLink?createDatabaseIfNotExist=true");
+  spring.datasource.url=yourDatabaseLink
+  spring.datasource.username=yourDatabaseUsername
+  spring.datasource.password=youDatabasePassword
+  spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
   ``` 
  ###### leave ?createDatabaseIfNotExist=true for database auto-creation
   
