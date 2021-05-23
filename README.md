@@ -6,9 +6,12 @@ Requirements Maven & Java
 git clone https://github.com/Isendoum/companycatalogue.git
 ```
 #### Step 2: Install dependencies and build artifacts
+```bash
+mvn install
+``` 
 #### Step 3: In project structure src/main/resources create application.properties file with your database link and credentials(don't forget this step otherwise it is going to throw an error on build) example:
   ```java
-  spring.datasource.url=yourDatabaseLink
+  spring.datasource.url=yourDatabaseLink?createDatabaseIfNotExist=true
   spring.datasource.username=yourDatabaseUsername
   spring.datasource.password=youDatabasePassword
   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -34,23 +37,34 @@ java -jar target/backend-0.0.1-SNAPSHOT.jar
 #### Rest Endpoints:
  
  #### Location endpoint rest/locations
- ##### get "/" 
+ ##### Get "/"
+    "Content-Type":"application/xml"
     returns xml list of all available locations
     
  #### Department endpoint rest/departments
- ##### get "/" request params (lodId, locName)
+ ##### Get "/" request params (lodId, locName)
+     "Content-Type":"application/xml"
+     
      Both params empty: returns xml list of all available departmets
      locId: returns xml list of all departments based on locId
      locName returns xml list of all departments based on locName
      Both params: returns xml list of all departments based on locName igonoring locId
      
  #### Empolyees endpoint rest/employees
- ##### get "/" request params
+ ##### Get "/" request params
+     "Content-Type":"application/xml"
+     
      returns xml list of all employees
- ##### get "/employeesByDept/" request params (deptId)
+ ##### Get "/employeesByDept/" request params (deptId)
+      "Content-Type":"application/xml"
+      
       returns xml list of all employees with deptId
- ##### get "/employee/" request params (empId)
+ ##### Get "/employee/" request params (empId)
+      "Content-Type":"application/xml"
+      
       returns xml of employee with empId
- ##### get "/search/" request params (firstName,lastName)
+ ##### Get "/search/" request params (firstName,lastName)
+      "Content-Type":"application/xml"
+      
       returns xml list of employees with match firstName and lastName or any of them if one is empty
       returns all employees if both params are empty strings
