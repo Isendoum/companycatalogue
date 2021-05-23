@@ -28,7 +28,7 @@ public class JPAConfig {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUsername("yourUsername");
         dataSource.setPassword("yourPassword");
-        dataSource.setUrl("yourDatabaseLink?createDatabaseIfNotExist=true")
+        dataSource.setUrl("yourDatabaseLink?createDatabaseIfNotExist=true");
         return dataSource;
     }
 
